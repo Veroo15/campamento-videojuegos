@@ -8,7 +8,7 @@ namespace CompleteProject
         Transform jugador;               // Reference to the player's position.
         SaludJugador saludJugador;      // Reference to the player's health.
         SaludEnemigo saludEnemigo;        // Reference to this enemy's health.
-        NavMeshAgent nav;               // Reference to the nav mesh agent.
+        UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
 
 
         void Awake ()
@@ -17,7 +17,7 @@ namespace CompleteProject
             jugador = GameObject.FindGameObjectWithTag ("Player").transform;
 			saludJugador = jugador.GetComponent <SaludJugador> ();
 			saludEnemigo = GetComponent <SaludEnemigo> ();
-            nav = GetComponent <NavMeshAgent> ();
+            nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
         }
 
 
